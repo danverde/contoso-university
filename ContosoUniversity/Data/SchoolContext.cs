@@ -14,6 +14,8 @@ namespace ContosoUniversity.Models
         {
         }
 
-        public DbSet<ContosoUniversity.Models.Student> Student { get; set; }
+        public DbSet<Student> Student { get; set; } //each connection is a differen table in the DB
+        public DbSet<Enrollment> Enrollment { get; set; }
+        public DbSet<Course> Course { get; set; }
     }
 }

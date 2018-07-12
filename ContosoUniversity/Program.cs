@@ -1,4 +1,5 @@
-﻿using ContosoUniversity.Models;                   // SchoolContext
+﻿using ContosoUniversity.Data;
+using ContosoUniversity.Models;                   // SchoolContext
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;   // CreateScope
@@ -20,7 +21,9 @@ namespace ContosoUniversity
                 try
                 {
                     var context = services.GetRequiredService<SchoolContext>();
-                    context.Database.EnsureCreated(); // creates a temp database if one doesn't already exist
+                    // context.Database.EnsureCreated(); // creates a temp database if one doesn't already exist
+
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {
