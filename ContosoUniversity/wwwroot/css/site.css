@@ -1,8 +1,12 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
 for details on configuring this project to bundle and minify static web assets. */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Gaegu');
+
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #e0e0e0 !important;
 }
 
 /* Wrapping element */
@@ -27,6 +31,30 @@ body {
 #qrCode {
     margin: 15px;
 }
+
+/* MY CHANGES!! */
+#homeImg {
+    max-width: 100%;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav.navbar {
+    background-color: navy !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.container.body-content {
+    background-color: white !important;
+}
+
+/* END MY CHANGES!! */
+
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
